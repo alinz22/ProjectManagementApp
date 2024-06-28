@@ -1,4 +1,12 @@
-export default function SelectedProject({ project, onDelete }) {
+import Tasks from "./Tasks";
+
+export default function SelectedProject({
+  project,
+  onDelete,
+  onAddTask,
+  onDeleteTask,
+  tasks,
+}) {
   if (!project) {
     return <div>No project selected</div>;
   }
@@ -23,6 +31,7 @@ export default function SelectedProject({ project, onDelete }) {
           {project.description}
         </p>
       </header>
+      <Tasks onAdd={onAddTask} onDelete={onDeleteTask} tasks={tasks} />
     </div>
   );
 }
