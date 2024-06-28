@@ -14,7 +14,7 @@ export default function NoProjectSelected({ onStartAddProject }) {
       <p className="text-stone-400 mb-4">
         Select a project or get started with a new one
       </p>
-      <p mt-8>
+      <p className="mt-8">
         <Button onClick={onStartAddProject}>Create New Project</Button>
       </p>
     </div>
